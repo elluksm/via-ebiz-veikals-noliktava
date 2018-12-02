@@ -44,9 +44,9 @@ app.get('/api/updateall', (req, res) => {
 
     MongoClient.connect(dburl, function(err, client) {
         console.log("Connected correctly to server.");
-        var url = 'http://localhost:3000';
-        var url2 = 'http://elinas-noliktava.azurewebsites.net';
-        
+        var url = 'http://localhost:3000';        
+        if (process.env.PORT)
+            url = 'http://elinas-noliktava.azurewebsites.net';
 
         url = url + '/api/getnew';
 

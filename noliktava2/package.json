@@ -9,7 +9,7 @@
         "start": "node index.js",
         "dev": "cd ./public && cross-env NODE_ENV=development webpack-dev-server --open --hot",
         "all": "npm run dev & npm run start ",
-        "build": "cd public && cross-env NODE_ENV=development webpack --progress --hide-modules && cp index.html dist/",
+        "build": "cd public && cross-env NODE_ENV=development webpack --progress --hide-modules && copy index.html dist\\",
         "forever": "forever -w ./index.js"
     },
     "dependencies": {
